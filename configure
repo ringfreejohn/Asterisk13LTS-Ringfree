@@ -14339,6 +14339,9 @@ fi
 
 if test "${disable_xmldoc}" != "yes"; then
 
+$as_echo "#define AST_XML_DOCS 1" >>confdefs.h
+
+
 if test "x${PBX_LIBXSLT}" != "x1" -a "${USE_LIBXSLT}" != "no"; then
    pbxlibdir=""
    # if --with-LIBXSLT=DIR has been specified, use it.

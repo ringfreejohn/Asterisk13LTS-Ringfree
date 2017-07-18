@@ -656,6 +656,7 @@ AC_ARG_ENABLE([xmldoc],
 	esac], [disable_xmldoc=no])
 
 if test "${disable_xmldoc}" != "yes"; then
+		AC_DEFINE([AST_XML_DOCS], 1, [Define to enable XML documentation.])
         AST_EXT_LIB_CHECK([LIBXSLT], [xslt], [xsltLoadStylesheetPI], [libxslt/xsltInternals.h], [${LIBXML2_LIB}], [${LIBXML2_INCLUDE}])
         AST_EXT_LIB_CHECK([LIBXSLT_CLEANUP], [xslt], [xsltCleanupGlobals], [libxslt/xsltInternals.h], [${LIBXML2_LIB}], [${LIBXML2_INCLUDE}])
 
