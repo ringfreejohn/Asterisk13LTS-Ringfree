@@ -5,12 +5,13 @@ The Ringfree branch of Asterisk 13 LTS for use in PBX OS 14
 ----------------------------------------------------------------------------------------
  
 2) Untar and run the following configure:
------------------------------------------
+
 
 $ ./configure --libdir=/usr/lib64 --with-pjproject-bundled --disable-xmldoc
 
+----------------------------------------------------------------------------------------
+
 3) Set compilation options
---------------------------
 
 $ make menuselect
 
@@ -22,19 +23,22 @@ There are some options we want to set here to ensure that Asterisk is suitably c
 - Turn on DONT_OPTIMIZE
 - Turn on format_mp3 
 
+----------------------------------------------------------------------------------------
+
 4) Stop Asterisk and remove all previous Asterisk modules:
-----------------------------------------------------------
 
 $ fwconsole stop 
 $ rm /usr/lib64/asterisk/modules/*
 
+----------------------------------------------------------------------------------------
+
 5) Compile
-----------
 
 $ make 
 $ make install
 
+----------------------------------------------------------------------------------------
+
 6) Start Asterisk
--------------------------------
 
 $ fwconsole start
